@@ -8,7 +8,12 @@ namespace employewage
     {
         public void Employewage()
         {
-            Console.WriteLine("welcome to employe wage problem");
+            Random random = new Random();
+            int employeecheck = random.Next(0, 2);
+            if (employeecheck == 0)
+                Console.WriteLine("Employee is absent");
+            else
+                Console.WriteLine("employee is present");
         }
     }
 }
