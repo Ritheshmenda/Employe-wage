@@ -8,27 +8,31 @@ namespace employewage
     {
         public void Employewage()
         {
-            Random random = new Random();
+            int employeehr = 0;
             int PERHRS = 20;
-            int no_of_hours_full = 8;
-            int no_of_hours_part = 4;
-            int no_of_workingdays = 20;
-            int employeecheck = random.Next(0, 3);
-            switch (employeecheck)
+            int no_of_days = 20;
+            int Total_working_hours_in_month = 100;
+            int total_working_ds = 0;
+            int Employeeinmonth = 0;
+            while (Employeeinmonth <= Total_working_hours_in_month && total_working_ds <= no_of_days)
             {
-                case 0:
-                    Console.WriteLine("employee is present full day");
-                    Console.WriteLine("employe salary per day is" + PERHRS * no_of_hours_full);
-                    Console.WriteLine("employe salary per month is" + PERHRS * no_of_hours_full * no_of_workingdays);
-                    break;
-                case 1:
-                    Console.WriteLine("employee is present for part time");
-                    Console.WriteLine("employe salary is " + PERHRS * no_of_hours_part * no_of_workingdays);
-                    break;
-                default:
-                    Console.WriteLine("Employee is absent");
-                    break;
+                total_working_ds++;
+                Random random = new Random();
+                int employeecheck = random.Next(0, 2);
+                switch (employeecheck)
+                {
+                    case 0:
+                        employeehr = 8;
+                        break;
+                    default:
+                        employeehr = 4;
+                        break;
+                }
+                Employeeinmonth = Employeeinmonth + employeehr;
             }
+            int wages_per_month;
+            wages_per_month = PERHRS * Employeeinmonth;
+            Console.WriteLine("wagespermonth : " + wages_per_month);
         }
     }
 }
