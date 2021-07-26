@@ -9,7 +9,7 @@ namespace employewage
         public void Employewage()
         {
             int employeehr = 0;
-            int PERHRS = 20;
+            int Perhrs = 20;
             int no_of_days = 20;
             int Total_working_hours_in_month = 100;
             int total_working_ds = 0;
@@ -31,7 +31,7 @@ namespace employewage
                 Employeeinmonth = Employeeinmonth + employeehr;
             }
             int wages_per_month;
-            wages_per_month = PERHRS * Employeeinmonth;
+            wages_per_month = Perhrs * Employeeinmonth;
             Console.WriteLine("wagespermonth : " + wages_per_month);
         }
     }
