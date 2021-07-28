@@ -6,15 +6,13 @@ namespace employewage
 {
     class Employeewage
     {
-        public void Employewage()
+        public static int  Employewage(string companyname ,int Perhrs, int no_of_working_days, int Total_working_hours_in_month)
         {
-            int employeehr = 0;
-            int Perhrs = 20;
-            int no_of_days = 20;
-            int Total_working_hours_in_month = 100;
+            int employeehr;
             int total_working_ds = 0;
-            int Employeeinmonth = 0;
-            while (Employeeinmonth <= Total_working_hours_in_month && total_working_ds <= no_of_days)
+            int Employeehrsinmonth = 0;
+            int wages_per_month;
+            while (Employeehrsinmonth <= Total_working_hours_in_month && total_working_ds <= no_of_working_days)
             {
                 total_working_ds++;
                 Random random = new Random();
@@ -28,11 +26,12 @@ namespace employewage
                         employeehr = 4;
                         break;
                 }
-                Employeeinmonth = Employeeinmonth + employeehr;
+                Employeehrsinmonth = Employeehrsinmonth + employeehr;
             }
-            int wages_per_month;
-            wages_per_month = Perhrs * Employeeinmonth;
+            wages_per_month = Perhrs * Employeehrsinmonth;
+            Console.WriteLine("name of the company : " + companyname);
             Console.WriteLine("wagespermonth : " + wages_per_month);
+            return wages_per_month;
         }
     }
 }
