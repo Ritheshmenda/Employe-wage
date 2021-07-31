@@ -6,11 +6,15 @@ namespace employewage
     {
         static void Main(string[] args)
         {
-            Employeewage.Employewage("company A", 30, 15, 103);
-            Employeewage.Employewage("company B", 20, 16, 105);
-            Employeewage.Employewage("company C", 10, 15, 109);
-            Employeewage.Employewage("company D", 15, 19, 100);
-            Employeewage.Employewage("company E", 35, 12, 108);
+            Employebuild companyA = new Employebuild("Company A", 30, 15, 103);
+            companyA.Employewage();
+            companyA.showresult();
+            Employebuild companyb = new Employebuild("companyB", 70, 40, 120);
+            companyb.Employewage();
+            companyb.showresult();
+            Employebuild companyc = new Employebuild("CompanyC", 70, 40, 120);
+            companyc.Employewage();
+            companyc.showresult();
         }
     }
 }
